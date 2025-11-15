@@ -9,28 +9,28 @@ namespace ClassLibrary.Models;
 
 public class ITSupport : User
 {
-        public Role Specialization { get; set; }
+    public Role Specialization { get; set; }
 
-        public enum Role
-        {
-            Network,
-            Software,
-            Hardware,
-            Security,
-            HelpDesk
-        }
+    public enum Role
+    {
+        Network,
+        Software,
+        Hardware,
+        Security,
+        HelpDesk
+    }
 
-        public ITSupport() { }
+    public ITSupport() { }
 
-        public ITSupport(int id, string name, string email, bool isactive, Role spec) : base(id, name, email, isactive)
-        {
-            Specialization = spec;
-        }
+    public ITSupport(int id, string name, string email, bool isactive, Role spec) : base(id, name, email, isactive)
+    {
+        Specialization = spec;
+    }
 
-        public override string ToString()
-        {
-            return base.ToString() + $", Specialization: {Specialization}";
-            ;
-        }
-}   
+    public override string ToString()
+    {
+        return base.ToString() + $", Specialization: {Specialization}";
+        ;
+    }
+}
 

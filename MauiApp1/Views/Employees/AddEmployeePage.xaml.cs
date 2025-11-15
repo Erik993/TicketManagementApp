@@ -6,13 +6,13 @@ public partial class AddEmployeePage : ContentPage
 {
     private EmployeesViewModel _viewModel;
     public AddEmployeePage(EmployeesViewModel viewModel)
-	{
-		InitializeComponent();
+    {
+        InitializeComponent();
         _viewModel = viewModel;
     }
 
-	private async void SaveButton_Clicked(object sender, EventArgs e)
-	{
+    private async void SaveButton_Clicked(object sender, EventArgs e)
+    {
         //no exception handling
         _viewModel.NewUserId = int.Parse(IdInput.Text);
         _viewModel.NewUserName = NameInput.Text;

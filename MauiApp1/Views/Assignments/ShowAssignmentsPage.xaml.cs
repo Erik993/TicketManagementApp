@@ -9,8 +9,8 @@ public partial class ShowAssignmentsPage : ContentPage
     private TicketViewModel _ticketViewModel;
     private ITSupportsViewModel _itSupportsViewModel;
     public ShowAssignmentsPage(AssignmentsViewModel assignmentsViewModel, TicketViewModel ticketViewModel, ITSupportsViewModel itSupportsViewModel)
-	{
-		InitializeComponent();
+    {
+        InitializeComponent();
         _assignmentsViewModel = assignmentsViewModel;
         _ticketViewModel = ticketViewModel;
         _itSupportsViewModel = itSupportsViewModel;

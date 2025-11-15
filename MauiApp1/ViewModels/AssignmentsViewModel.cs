@@ -40,7 +40,7 @@ namespace MauiApp2.ViewModels
         public void UpdateAssignment(Assignment updatedAssignment)
         {
             int index = -1;
-            for (int i = 0; i <Assignments.Count; i++)
+            for (int i = 0; i < Assignments.Count; i++)
             {
                 if (Assignments[i].AssignedAt == updatedAssignment.AssignedAt)
                 {
@@ -49,12 +49,12 @@ namespace MauiApp2.ViewModels
                 }
             }
 
-            if(index >= 0)
+            if (index >= 0)
             {
                 Assignments[index] = updatedAssignment;
             }
         }
-        
+
 
     }
 }

@@ -6,8 +6,8 @@ public partial class ShowEmployeesPage : ContentPage
 {
     private EmployeesViewModel _viewModel;
     public ShowEmployeesPage(EmployeesViewModel viewModel)
-	{
-		InitializeComponent();
+    {
+        InitializeComponent();
         _viewModel = viewModel;
 
         //BindingContext is only set when the constructor runs

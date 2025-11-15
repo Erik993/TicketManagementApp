@@ -7,11 +7,11 @@ namespace MauiApp2.Views.ITSupport;
 
 public partial class AddITSupportPage : ContentPage
 {
-	private ITSupportsViewModel _viewModel;
-	public AddITSupportPage(ITSupportsViewModel viewModel)
-	{
-		InitializeComponent();
-		_viewModel = viewModel;
+    private ITSupportsViewModel _viewModel;
+    public AddITSupportPage(ITSupportsViewModel viewModel)
+    {
+        InitializeComponent();
+        _viewModel = viewModel;
 
 
         //SpecializationPicker from the .xaml saves athe enum values
@@ -37,7 +37,7 @@ public partial class AddITSupportPage : ContentPage
     }
 
     private async void SaveButton_Clicked(object sender, EventArgs e)
-	{
+    {
         //no exception handling
         _viewModel.NewUserId = int.Parse(IdInput.Text);
         _viewModel.NewUserName = NameInput.Text;

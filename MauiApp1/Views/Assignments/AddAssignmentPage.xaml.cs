@@ -11,8 +11,8 @@ public partial class AddAssignmentPage : ContentPage
     private ITSupportsViewModel _itSupportsViewModel;
 
     public AddAssignmentPage(AssignmentsViewModel assignmentsViewModel, TicketViewModel ticketViewModel, ITSupportsViewModel itSupportsViewModel)
-	{
-		InitializeComponent();
+    {
+        InitializeComponent();
         _assignmentsViewModel = assignmentsViewModel;
         _ticketViewModel = ticketViewModel;
         _itSupportsViewModel = itSupportsViewModel;
@@ -26,7 +26,7 @@ public partial class AddAssignmentPage : ContentPage
     {
         _assignmentsViewModel.NewComment = CommentInput.Text;
 
-        if(TicketPicker.SelectedItem != null)
+        if (TicketPicker.SelectedItem != null)
         {
             _assignmentsViewModel.NewTicket = (TicketModel)TicketPicker.SelectedItem;
         }

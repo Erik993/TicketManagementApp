@@ -11,11 +11,11 @@ public class AssignmentFactory
 
     private IEnumerable<Ticket> _tickets;
     private IEnumerable<ITSupport> _itSupports;
-    
+
 
     private Random _rand = new Random();
 
-    
+
     public AssignmentFactory(IEnumerable<Ticket> tickets, IEnumerable<ITSupport> itSupports)
     {
         _tickets = tickets;

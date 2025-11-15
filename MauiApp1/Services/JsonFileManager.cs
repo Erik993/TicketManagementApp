@@ -26,7 +26,7 @@ namespace Services
         public void Save<T>(List<T> repositoryData)
         {
             string typeName = typeof(T).Name; // get the objects type name
-            string filename = $"{typeName}.json"; 
+            string filename = $"{typeName}.json";
             Directory.CreateDirectory(DirectoryPath); // create new directory
             string fullpath = Path.Combine(DirectoryPath, filename); //save directory and objectsname.json
 
@@ -36,7 +36,7 @@ namespace Services
             Debug.WriteLine($"Saving to: {fullpath}");
         }
 
-        
+
         // Object's type name (ex. Employee, Ticket) is saved to check if directory has ObjectName.json file
         // if no file exists, new empty List is returned, if file exists, data is deserialized 
         public List<T> Load<T>()
@@ -54,7 +54,7 @@ namespace Services
             string json = File.ReadAllText(fullpath);
             Debug.WriteLine($"Loading from : {fullpath}");
             return JsonSerializer.Deserialize<List<T>>(json) ?? new List<T>();
-            
+
         }
     }
 }

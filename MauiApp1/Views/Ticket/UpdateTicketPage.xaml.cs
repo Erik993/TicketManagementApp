@@ -13,8 +13,8 @@ public partial class UpdateTicketPage : ContentPage
     private EmployeesViewModel _employeeViewModel;
 
     public UpdateTicketPage(TicketModel ticket, TicketViewModel ticketViewModel, EmployeesViewModel employeeViewModel)
-	{
-		InitializeComponent();
+    {
+        InitializeComponent();
 
         _ticket = ticket;
         _ticketViewModel = ticketViewModel;
@@ -33,7 +33,7 @@ public partial class UpdateTicketPage : ContentPage
 
         EmployeePicker.SelectedItem = _ticket.CreatedBy; // or Employee object
         IsActiveSwitch.IsToggled = _ticket.IsResolved;
-        
+
     }
 
     private async void SaveButton_Clicked(object sender, EventArgs e)

@@ -39,6 +39,6 @@ namespace MauiApp2.ViewModels
         {
             ITSupports.Clear();
         }
-            
+
     }
 }

@@ -25,7 +25,7 @@ namespace MauiApp2.ViewModels
 
         public void AddTicket()
         {
-            Ticket ticket = new(NewTitle, NewDescription, NewPriority, 
+            Ticket ticket = new(NewTitle, NewDescription, NewPriority,
                 NewTicketId, NewCreatedBy, NewStatus, NewIsResolved);
 
             Tickets.Add(ticket);
@@ -48,7 +48,7 @@ namespace MauiApp2.ViewModels
         public void UpdateTicket(Ticket updatedTicket)
         {
             int index = -1;
-            for(int i = 0; i < Tickets.Count; i++)
+            for (int i = 0; i < Tickets.Count; i++)
             {
                 if (Tickets[i].TicketID == updatedTicket.TicketID)
                 {
@@ -57,11 +57,11 @@ namespace MauiApp2.ViewModels
                 }
             }
 
-            if(index >= 0)
+            if (index >= 0)
             {
                 Tickets[index] = updatedTicket;
             }
         }
-        
+
     }
 }

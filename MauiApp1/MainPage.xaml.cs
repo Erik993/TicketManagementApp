@@ -10,10 +10,10 @@ using MauiApp2.Views.Assignments;
 
 namespace MauiApp2
 
-    /*
-     The program somethimes started to crash with exception, after a added UsersShow functionality to observe all the users in 1 page
-     
-     */
+/*
+ The program somethimes started to crash with exception, after a added UsersShow functionality to observe all the users in 1 page
+
+ */
 {
     public partial class MainPage : ContentPage
     {
@@ -22,8 +22,8 @@ namespace MauiApp2
         private TicketViewModel _ticketsViewModel;
         private AssignmentsViewModel _assignmentViewModel;
         private JsonFileManager _jsonFileManager;
-       
-        public MainPage(EmployeesViewModel employeesViewModel, ITSupportsViewModel itSupportsViewModel, 
+
+        public MainPage(EmployeesViewModel employeesViewModel, ITSupportsViewModel itSupportsViewModel,
             TicketViewModel ticketViewModel, AssignmentsViewModel assignmentsViewModel, JsonFileManager jsonFileManager)
         {
             InitializeComponent();
@@ -33,7 +33,7 @@ namespace MauiApp2
             _jsonFileManager = jsonFileManager;
             _assignmentViewModel = assignmentsViewModel;
         }
-        
+
 
         //redirecting to Employee Page
         private async void EmployeeButtonClicked(object sender, EventArgs e)
