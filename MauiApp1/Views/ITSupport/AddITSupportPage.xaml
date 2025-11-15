@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp2.Views.ITSupport.AddITSupportPage"
+             Title="AddITSupportPage">
+    
+    <VerticalStackLayout Padding="20" Spacing="15">
+        <Label Text="Add New ItSupport" FontSize="24" HorizontalOptions="Center"/>
+
+        <Entry x:Name="IdInput" Placeholder="User ID (integers only - no exception handling)"/>
+        <Entry x:Name="NameInput" Placeholder="Name"/>
+        <Entry x:Name="EmailInput" Placeholder="Email ( 1+ char, @ symbol, 1+ char .(dot) symbol, 1+ char"/>
+        <Switch x:Name="IsActiveSwitch"/>
+        <Picker x:Name="SpecializationPicker" Title="Select Specialization"></Picker>
+
+        <Button Text="Save IT Support" Clicked="SaveButton_Clicked"/>
+    </VerticalStackLayout>
+    
+</ContentPage>

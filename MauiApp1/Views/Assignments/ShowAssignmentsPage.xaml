@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp2.Views.Assignments.ShowAssignmentsPage"
+             Title="ShowAssignmentsPage">
+
+
+    <!--To make an element clickable in CollectionView add: SelectionMode="Single" and SelectionChanged="OnTicketSelected"
+    -->
+    <VerticalStackLayout>
+        <Label Text="Noklikšķiniet uz elementa, lai to atjauninātu" FontSize="24" HorizontalOptions="Center" BackgroundColor="Red"/>
+
+        <CollectionView ItemsSource="{Binding Assignments}"
+                    SelectionMode="Single"
+                    SelectionChanged="OnAssignmentSelected">
+            <CollectionView.ItemsLayout>
+                <GridItemsLayout Orientation="Vertical" Span="5" />
+            </CollectionView.ItemsLayout>
+
+            <CollectionView.ItemTemplate>
+
+                <DataTemplate>
+                    <!---->
+                    <Frame Margin="8"
+                   Padding="8"
+                   BorderColor="LightGray"
+                   CornerRadius="12"
+                   BackgroundColor="FloralWhite">
+                        <VerticalStackLayout Spacing="4">
+                            <Label Text="{Binding AssignedAt, StringFormat='Assigned At: {0}'}" FontSize="12" />
+                            <Label Text="{Binding Support, StringFormat='Support: {0}'}" FontSize="18"/>
+                            <Label Text="{Binding Ticket, StringFormat='Ticket: {0}'}" FontSize="14" />
+                            <Label Text="{Binding Comment, StringFormat='Comment: {0}'}" FontSize="12" />
+                        </VerticalStackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+    </VerticalStackLayout>
+
+
+</ContentPage>

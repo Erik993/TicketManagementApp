@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp2.Views.Ticket.AddTicketPage"
+             Title="AddTicketPage">
+    
+    <VerticalStackLayout Padding="20" Spacing="15">
+        <Label Text="Add New ItSupport" FontSize="24" HorizontalOptions="Center"/>
+
+        <Entry x:Name="TicketIdInput" Placeholder="Ticket ID"/>
+        <Entry x:Name="TitleInput" Placeholder="Title"/>
+        <Entry x:Name="DescriptionInput" Placeholder="Desctiption"/>
+        <Entry x:Name="PriorityInput" Placeholder="Priority (integer)"/>
+        <Picker x:Name="StatusPicker" Title="Select Status"></Picker>
+        <Picker x:Name="EmployeePicker" Title="Select Employee"></Picker>
+        <Switch x:Name="IsActiveSwitch"/>
+
+        <Button Text="Save Ticket" Clicked="SaveButton_Clicked"/>
+    </VerticalStackLayout>
+    
+</ContentPage>

@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp2.MainPage">
+
+    <Grid Padding="10" RowSpacing="10" ColumnSpacing="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Image Grid.Row="0" Grid.ColumnSpan="2"
+           Source="dotnet_bot.png"
+           BackgroundColor="Transparent"
+           HorizontalOptions="Center"/>
+
+        <Button Grid.Row="1" Grid.ColumnSpan="2" Text="Show all users" Clicked="AllUserButtonClicked"/>
+        <Button Grid.Row="2" Grid.Column="0" Text="Employees" Clicked="EmployeeButtonClicked"/>
+        <Button Grid.Row="2" Grid.Column="1" Text="ITSupports" Clicked="ITSupportButtonClicked"/>
+        <Button Grid.Row="3" Grid.Column="0" Text="Tickets" Clicked="TicketButtonClicked"/>
+        <Button Grid.Row="3" Grid.Column="1" Text="Assignments" Clicked="AssignmentButtonClicked"/>
+        <!--<Button Grid.Row="4" Grid.ColumnSpan="2" Text="Create Test Data"/>-->
+        
+        <!--
+        <Button Grid.Row="5" Grid.Column="0" Text="Save all the data to JSON file" Clicked="SaveAllDataToJsonClicked"/>
+        <Button Grid.Row="5" Grid.Column="1" Text="Upload data from JSON file" Clicked="LoadAllDataFromJsonClicked"/>
+        -->
+
+        <ScrollView Grid.Row="5" Grid.ColumnSpan="2" Padding="10">
+            <VerticalStackLayout Spacing="10">
+                <Label Text="1) Katra poga pāradresē uz Employee, ITSupport, Ticket, Assignment lai strādāt atsevišķi ar katru klasi"
+                   LineBreakMode="WordWrap" FontSize="16"/>
+                <Label Text="2) Show all users – rādīt visus Employee un IT Support"
+                   LineBreakMode="WordWrap" FontSize="16"/>
+                <Label Text="3) var apskātīt konkrēta tipa objektus"
+                   LineBreakMode="WordWrap" FontSize="16"/>
+                <Label Text="4) Var manuāli izveidot jaunu objektu."
+                   LineBreakMode="WordWrap" FontSize="16"/>
+                <Label Text="5) Var automātiski izveidot vienu testa objektu."
+   LineBreakMode="WordWrap" FontSize="16"/>
+                <Label Text="6) Saglabāt atmiņā vai ielādēt esošos objektus JSON failā (faila nosaukums = ObjectName.json)."
+                   LineBreakMode="WordWrap" FontSize="16"/>
+                <Label Text="--- Saglabāšanas un ielādes funkcija saglabā un ielādē objectName.json uz noklusēto ceļu, ko definē MAUI."
+                   LineBreakMode="WordWrap" FontSize="16"/>
+                <Label Text="7) Lai atjauninātu Ticket vai Assignment, jāiet uz attiecīgo Ticket vai Assignment sadaļu, jāatver (Show) un jāuzklikšķina uz konkrēto elementu."
+                   LineBreakMode="WordWrap" FontSize="16"/>
+                <Label Text="8) Dzēst visus objektus no atmiņas (json faili ar datiem netiek dzēsti)"
+                   LineBreakMode="WordWrap" FontSize="16"/>
+                <Label Text="9) Tā kā Ticket ir atkarīgs no Employee. Assignment atkarīgs no Ticket un ITSupport, ideāli būtu sākuma uztaisīt vismaz 1 Employee un, 1 ITSupport, tālāk vismaz 1 Ticket, un Assignment-us"
+                   LineBreakMode="WordWrap" FontSize="16"/>
+                <Label Text="10) Nav exception handling, tāpēc programma var aizvērties (crashes)"
+                   LineBreakMode="WordWrap" FontSize="16"/>
+                <Label Text="11) Vietās, kur viens objekts ir saistīts ar citu, piemēram, Ticket ar Employee, Ticket objektā vienkārši tiek attēlota visa informācija par saistīto Employee objektu, bez jebkādas īpašas formatēšanas."
+   LineBreakMode="WordWrap" FontSize="16"/>
+
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+    
+
+
+</ContentPage>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp2.Views.Assignments.AssignmentsPage"
+             Title="AssignmentsPage">
+    
+    <Grid Padding="10" RowSpacing="10" ColumnSpacing="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Label Grid.Row ="1" Grid.ColumnSpan="2" Text="Assignments page" FontSize="24"></Label>
+        <Button Grid.Row="2" Grid.Column="0" Text="Show Assignments" Clicked="ShowAssignmentsButtonClicked"></Button>
+        <Button Grid.Row="2" Grid.Column="1" Text="Add Assignment" Clicked="AddAssignmentButtonClicked"></Button>
+        
+        <Button Grid.Row="3" Grid.Column="0" Text="Save Assignments to JSON file" Clicked="SaveAssignmentsToJsonClicked"/>
+        <Button Grid.Row="3" Grid.Column="1" Text="Load Assignments from JSON file" Clicked="LoadAssignmentsFromJsonClicked"/>
+
+        <Button Grid.Row="4" Grid.Column="0" Text="Create 1 Test Assignment" Clicked="CreateTestAssignmentClicked"/>
+
+
+        <Button Grid.Row="4" Grid.Column="1" Text="Delete Assignments from memory" Clicked="DeleteAssignmentsClicked"/>
+
+        <ScrollView Grid.Row="5" Grid.ColumnSpan="2" Padding="10">
+            <VerticalStackLayout Spacing="10">
+                <!--TODO: UPDATE DESCRIPTION--> 
+                <Label Text="* Assignment pieder Ticket un ITSupport"
+                LineBreakMode="WordWrap" FontSize="16"/>
+                <Label Text="* Ir divi veidi, kā izveidot jaunu tiketu: "
+                LineBreakMode="WordWrap" FontSize="16"/>
+                <Label Text="1. Vispirms izveidot jaunus Ticket un ITSupport"
+                LineBreakMode="WordWrap" FontSize="16"/>
+                <Label Text="2. Ja nav pieejami Ticket un ITSupport"
+LineBreakMode="WordWrap" FontSize="16"/>
+                <Label Text="--- Manuāli veidojot jaunu Assignment, Ticket un ITSupport saraksts ir tukšs, šie lauki būs null."
+LineBreakMode="WordWrap" FontSize="16"/>
+                <Label Text="--- Veidojot testa Assignment, Ticket un ITSupport ir nejauši izvēlēti no pieejamiem sarakstā un ja saraksti ir tukši – assignment tiek izveidots ar iepriekš definētu Ticket un ITSUpport (hardcoded), kas nebūs redzami ārpus ši objekta jo netiek saglābāti un iekļatu kolekcijās."
+LineBreakMode="WordWrap" FontSize="16"/>
+
+
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+    
+</ContentPage>

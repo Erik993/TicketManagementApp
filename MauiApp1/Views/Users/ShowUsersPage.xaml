@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp2.Views.Users.ShowUsersPage"
+             Title="ShowUsersPage">
+    
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+
+            <Label Text="Employees"
+                   FontSize="20"
+                   FontAttributes="Bold"/>
+
+            <CollectionView ItemsSource="{Binding EmployeesVM.Employees}"
+                            SelectionMode="Single"
+                            x:Name="EmployeesList">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame Margin="0,5"
+                               Padding="10"
+                               BorderColor="#ddd"
+                               CornerRadius="10">
+                            
+                            <VerticalStackLayout Spacing="5">
+                                <Label Text="{Binding UserName}" FontAttributes="Bold" FontSize="16"/>
+                                <Label Text="{Binding Email}" FontSize="14" TextColor="Gray"/>
+                                <Label Text="{Binding ContractDate, StringFormat='Contract Date: {0:yyyy-MM-dd}'}" FontSize="13"/>
+                                <Label Text="{Binding IsActive, StringFormat='Active: {0}'}" FontSize="13"/>
+
+      
+                            </VerticalStackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            
+            
+        <Label Text="IT Supports"
+                   FontSize="20"
+                   FontAttributes="Bold"/>
+
+        <CollectionView ItemsSource="{Binding ITSupportsVM.ITSupports}"
+                            SelectionMode="Single"
+                            x:Name="ITSupportList">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame Margin="0,5"
+                               Padding="10"
+                               BorderColor="#ddd"
+                               CornerRadius="10">
+                            <VerticalStackLayout Spacing="5">
+                                <Label Text="{Binding UserName}" FontAttributes="Bold" FontSize="16"/>
+                                <Label Text="{Binding Email}" FontSize="14" TextColor="Gray"/>
+                                <Label Text="{Binding Specialization}" FontSize="13"/>
+                                <Label Text="{Binding IsActive, StringFormat='Active: {0}'}" FontSize="13"/>
+
+                            </VerticalStackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

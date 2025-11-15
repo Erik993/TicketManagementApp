@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp2.Views.Ticket.TicketsPage"
+             Title="TicketsPage">
+    
+    <Grid Padding="10" RowSpacing="10" ColumnSpacing="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Label Grid.Row ="1" Grid.ColumnSpan="2" Text="Ticket page" FontSize="24"></Label>
+        <Button Grid.Row="2" Grid.Column="0" Text="Show Tickets" Clicked="ShowTicketsButtonClicked"></Button>
+        <Button Grid.Row="2" Grid.Column="1" Text="Add Ticket" Clicked="AddTicketButtonClicked"></Button>
+        <Button Grid.Row="3" Grid.Column="0" Text="Save Tickets to JSON file" Clicked="SaveTicketsToJsonClicked"/>
+        <Button Grid.Row="3" Grid.Column="1" Text="Load Tickets from JSON file" Clicked="LoadTicketsFromJsonClicked"/>
+        <Button Grid.Row="4" Grid.Column="0" Text="Create 1 Test Ticket" Clicked="CreateTestTicketClicked"/>
+        <Button Grid.Row="4" Grid.Column="1" Text="Delete Tickets from memory" Clicked="DeleteTicketsClicked"/>
+
+
+
+        <ScrollView Grid.Row="5" Grid.ColumnSpan="2" Padding="10">
+            <VerticalStackLayout Spacing="10">
+
+                <Label Text="* Tikets pieder darbiniekam, kurš to izveidoja."
+                   LineBreakMode="WordWrap" FontSize="16"/>
+                <Label Text="* Ir divi veidi, kā izveidot jaunu tiketu: "
+                   LineBreakMode="WordWrap" FontSize="16"/>
+                <Label Text="1. Vispirms izveidot jaunu darbinieku, pēc tam tam var piešķirt tiketu."
+                   LineBreakMode="WordWrap" FontSize="16"/>
+                <Label Text="2. Ja nav pieejami darbinieki:"
+   LineBreakMode="WordWrap" FontSize="16"/>
+                <Label Text="--- Manuāli veidojot jaunu tiketu, darbinieku saraksts ir tukšs, un lauks “tikešu izveidotājs” būs null."
+   LineBreakMode="WordWrap" FontSize="16"/>
+                <Label Text="--- Veidojot testa tiketu, darbinieks ir nejauši izvēlēts no pieejamiem sarakstā un ja darbinieku nav – tikets tiek izveidots ar iepriekš definētu darbinieku, kurš nav iekļauts darbinieku sarakstā un nav redzams ārpus tiketu saraksta."
+   LineBreakMode="WordWrap" FontSize="16"/>
+                
+
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

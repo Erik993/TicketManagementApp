@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp2.Views.Assignments.AddAssignmentPage"
+             Title="AddAssignmentPage">
+    
+    <VerticalStackLayout Padding="20" Spacing="15">
+        <Label Text="Add new Assignment" FontSize="24" HorizontalOptions="Center"/>
+
+        <Picker x:Name="TicketPicker" Title="Select Ticket"></Picker>
+        <Picker x:Name="ITSupportPicker" Title="Select ITSupport"></Picker>
+        <Entry x:Name="CommentInput" Placeholder="Comment"/>
+
+        <Button Text="Save Assignment" Clicked="SaveButton_Clicked"/>
+    </VerticalStackLayout>
+
+</ContentPage>

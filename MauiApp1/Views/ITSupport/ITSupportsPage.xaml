@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp2.Views.ITSupport.ITSupportsPage"
+             Title="ITSupportsPage">
+    
+    <Grid Padding="10" RowSpacing="10" ColumnSpacing="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Label Grid.Row ="1" Grid.ColumnSpan="2" Text="ITSupport page" FontSize="24"></Label>
+        <Button Grid.Row="2" Grid.Column="0" Text="Show ITSupports" Clicked="ShowITSupportsButtonClicked"></Button>
+        <Button Grid.Row="2" Grid.Column="1" Text="Add ITSupport" Clicked="AddITSupportButtonClicked"></Button>
+        <Button Grid.Row="3" Grid.Column="0" Text="Save Employees to JSON file" Clicked="SaveITSupportsToJsonClicked"/>
+        <Button Grid.Row="3" Grid.Column="1" Text="Load Employees from JSON file" Clicked="LoadITSupportsFromJsonClicked"/>
+        <Button Grid.Row="4" Grid.Column="0" Text="Create 1 Test IT Support" Clicked="CreateTestITSupportClicked"/>
+        <Button Grid.Row="4" Grid.Column="1" Text="Delete Employees from memory" Clicked="DeleteITSupportsClicked"/>
+
+    </Grid>
+    
+</ContentPage>
