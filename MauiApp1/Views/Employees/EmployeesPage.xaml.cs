@@ -48,7 +48,7 @@ public partial class EmployeesPage : ContentPage
 
     public void CreateTestEmployeesClicked(object sender, EventArgs e)
     {
-        var empl = _employeeFactory.CreateItem(1);
+        var empl = _employeeFactory.CreateItem(/*1*/);
         _viewModel.AddEmployee(empl);
 
         DisplayAlert("Success", "Test Employee is created", "OK");

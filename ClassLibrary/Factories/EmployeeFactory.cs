@@ -6,16 +6,16 @@ namespace ClassLibraryFactories;
 
 public class EmployeeFactory
 {
-    public Employee CreateItem(int index)
+    public Employee CreateItem()
     {
         var rand = new Random();
         int randNum = rand.Next(0, 1000);
 
         return new Employee(
-            id: index,
+            //id: index,
             name: $"employee{randNum}",
             email: $"employee{randNum}@gmail.com",
-            isactive: index % 2 == 0,
+            isactive: true,
             contractDate: DateTime.Now
             );
     }

@@ -51,7 +51,7 @@ public partial class ITSupportsPage : ContentPage
 
     public void CreateTestITSupportClicked(object sender, EventArgs e)
     {
-        var sup = _itSupportFactory.CreateItem(1);
+        var sup = _itSupportFactory.CreateItem(/*1*/);
         _viewModel.AddITSupport(sup);
 
         DisplayAlert("Success", "Test IT Support is created", "OK");

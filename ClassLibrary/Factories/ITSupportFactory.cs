@@ -5,7 +5,7 @@ namespace ClassLibraryFactories;
 
 public class ITSupportFactory
 {
-    public ITSupport CreateItem(int index)
+    public ITSupport CreateItem(/*int index*/)
     {
         var rand = new Random();
 
@@ -14,10 +14,10 @@ public class ITSupportFactory
         ITSupport.Role role = (ITSupport.Role)randInt; // get random role from enums
 
         return new ITSupport(
-            id: index,
+            //id: index,
             name: $"itSupport{randId}",
             email: $"itSupport{randId}@gmail.com",
-            isactive: index % 2 == 0,
+            isactive: true,
             spec: role
         );
     }

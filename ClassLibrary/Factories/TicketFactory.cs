@@ -42,7 +42,7 @@ public class TicketFactory
                 description: $"description{randNum}",
                 priority: randNum,
                 ticketId: index,
-                createdBy: createdBy ?? new Employee(0, "DefaultCreator", "default@gmail.com", true, DateTime.Now),
+                createdBy: createdBy ?? new Employee(/*0,*/ "DefaultCreator", "default@gmail.com", true, DateTime.Now),
                 status: Ticket.StatusEnum.Open,
                 isResolved: false
             );

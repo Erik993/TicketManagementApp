@@ -39,7 +39,7 @@ public partial class AddITSupportPage : ContentPage
     private async void SaveButton_Clicked(object sender, EventArgs e)
     {
         //no exception handling
-        _viewModel.NewUserId = int.Parse(IdInput.Text);
+        //_viewModel.NewUserId = int.Parse(IdInput.Text);
         _viewModel.NewUserName = NameInput.Text;
         _viewModel.NewEmail = EmailInput.Text;
         _viewModel.NewIsActve = IsActiveSwitch.IsToggled;

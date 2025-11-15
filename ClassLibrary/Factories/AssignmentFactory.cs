@@ -48,7 +48,7 @@ public class AssignmentFactory
 
         return new Assignment(
             // if itsupport is null, then new support with default data is created
-            support: itSupport ?? new ITSupport(0, "default Support", "defSup@gmail.com", true, ITSupport.Role.HelpDesk),
+            support: itSupport ?? new ITSupport(/*0, */"default Support", "defSup@gmail.com", true, ITSupport.Role.HelpDesk),
 
             // if ticket is null, then new ticket with default data is created with created by as null
             ticket: ticket ?? new Ticket("default Title", "default description", 1, 0, null, Ticket.StatusEnum.Open, false),

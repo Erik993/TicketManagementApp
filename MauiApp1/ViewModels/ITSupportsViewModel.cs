@@ -15,7 +15,7 @@ namespace MauiApp2.ViewModels
 
         public ObservableCollection<ITSupport> ITSupports { get; set; } = new();
 
-        public int NewUserId { get; set; }
+        //public int NewUserId { get; set; }
         public string NewUserName { get; set; } = string.Empty;
         public string NewEmail { get; set; } = string.Empty;
         public bool NewIsActve { get; set; }
@@ -25,7 +25,7 @@ namespace MauiApp2.ViewModels
         //2 overloaded Add methods
         public void AddITSupport()
         {
-            ITSupport itSup = new(NewUserId, NewUserName, NewEmail, NewIsActve, NewSpecialization);
+            ITSupport itSup = new(/*NewUserId,*/ NewUserName, NewEmail, NewIsActve, NewSpecialization);
             ITSupports.Add(itSup);
         }
 

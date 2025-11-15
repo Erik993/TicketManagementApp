@@ -22,7 +22,7 @@ public class ITSupport : User
 
     public ITSupport() { }
 
-    public ITSupport(int id, string name, string email, bool isactive, Role spec) : base(id, name, email, isactive)
+    public ITSupport(string name, string email, bool isactive, Role spec) : base(name, email, isactive)
     {
         Specialization = spec;
     }

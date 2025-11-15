@@ -7,7 +7,7 @@ namespace MauiApp2.ViewModels
     {
         public ObservableCollection<Employee> Employees { get; set; } = new();
 
-        public int NewUserId { get; set; }
+        //public int NewUserId { get; set; }
         public string NewUserName { get; set; } = string.Empty;
         public string NewEmail { get; set; } = string.Empty;
         public bool NewIsActve { get; set; }
@@ -16,7 +16,7 @@ namespace MauiApp2.ViewModels
         //2 overloaded Add methods
         public void AddEmployee()
         {
-            Employee empl = new(NewUserId, NewUserName, NewEmail, NewIsActve);
+            Employee empl = new(/*NewUserId,*/ NewUserName, NewEmail, NewIsActve);
             Employees.Add(empl);
         }
 
